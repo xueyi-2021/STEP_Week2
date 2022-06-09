@@ -6,21 +6,20 @@
 
 #### コード
 
-`for i in range(n):`  
-
-​	`for j in range(n):`
-
-​		`for k in range(n):`
-
-​			`c[i, j] += a[i, k] * b[k, j]`
+```python
+for i in range(n): 
+   for j in range(n):
+       for k in range(n):
+               c[i, j] += a[i, k] * b[k, j]
+```
 
 #### 結果
 
 N=1~1500の実行時間とNの関係：
 
-![homework1](C:\Users\sqxys\Desktop\STEP\Week2\homework1.png)
+![](https://github.com/xueyi-2021/STEP_Week2/blob/master/homework1.png)
 
-誤差はあるが、フィッティングの結果かなり微妙......（計算量はO(N^3)だけど…なんでだろう…）
+誤差はあるが、フィッティングの結果かなり微妙......（計算量はO(N^3)だけど…なぜだろう…)
 
 <br>
 
@@ -57,7 +56,7 @@ N=1~1500の実行時間とNの関係：
   - listの中で指定位置の要素を取り出すの計算量はO(n)で、目標はほぼO(1)なので、この方法がちょっと間違ってると思う。けど、これをとりあえず実装してみた。
 - ここでの実装はWebpageの名前だけ記録されるが\<Webpageの名前>と\<URL>でハッシュテーブルでO(1)で見つけるので実装したいなら普通にできると思う。
 
-#### データ構造（擬似コード~~(ほぼコード)~~）
+#### データ構造（擬似コード(ほぼコード)）
 
 ```python
 class cache:
@@ -121,10 +120,10 @@ class cache_linkedlist:
                 if cache is full:
                     一番前のページを削除
                     tail = new_page
-         			いろいろ連結する
+                    いろいろ連結する
                 else cache is not full:
                     tail = new_page
-         			いろいろ連結する
+                    いろいろ連結する
                     長さ += 1
 
             else new_pageはcacheに保存されている場合:
@@ -134,7 +133,7 @@ class cache_linkedlist:
                 elif new_pageはhead:
                     交換と連結
                 else new_pageは中間のページ:
-					交換と連結
+                    交換と連結
 
     def all_pages(self):
         page = self.tail    
