@@ -91,7 +91,7 @@ class cache:
 
 - cacheの中身を確認する時、
   - 新しい → 古い順で出力したいので、tailを始点としてheadまで探索。
-- 今回は\<Webpageの名前>と\<URL>両方とも記録できようにした。
+- 今回は\<Webpageの名前>と\<URL>両方とも記録できるようにした。
 
 #### データ構造（擬似コード） -> linkedlist_modified.py
 
@@ -100,7 +100,7 @@ class linkedlist_node:
     def __init__(self, url, contents):
         self.url = url
         self.contents = contents
-        self.prev = None   #一個前にページ
+        self.prev = None   #一個前のページ
         self.next = None   #一個後ろのページ
 
 class cache_linkedlist:

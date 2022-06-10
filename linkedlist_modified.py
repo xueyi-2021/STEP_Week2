@@ -2,7 +2,7 @@ class linkedlist_node:
     def __init__(self, url, contents):
         self.url = url
         self.contents = contents
-        self.prev = None   #一個前にページ
+        self.prev = None   #一個前のページ
         self.next = None   #一個後ろのページ
 
 
